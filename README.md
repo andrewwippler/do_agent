@@ -2,6 +2,8 @@
 
 ## Description
 
+[![Build Status](https://travis-ci.org/andrewwippler/do_agent.svg?branch=master)](https://travis-ci.org/andrewwippler/do_agent)
+
 This sets up the DigitalOcean agent for metric/stats collection on a Droplet.
 
 ## Setup
