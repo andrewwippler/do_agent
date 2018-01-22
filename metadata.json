@@ -1,6 +1,6 @@
 {
   "name": "andrewwippler-do_agent",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Andrew J Wippler",
   "summary": "Installs the DigitalOcean Agent for better metrics/stats on the Droplet.",
   "license": "MIT",

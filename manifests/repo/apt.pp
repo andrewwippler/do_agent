@@ -18,7 +18,7 @@ if ($facts['os']['release']['major'] < '7') and ($::operatingsystem != 'Ubuntu')
     fail("Your version (${ver}) of ${::operatingsystem} is too old for do_agent")
   }
 
-  apt::source { 'digitalocean-agent.list':
+  apt::source { 'digitalocean-agent':
     location => 'https://repos.sonar.digitalocean.com/apt',
     release  => 'main',
     repos    => 'main',
@@ -27,8 +27,9 @@ if ($facts['os']['release']['major'] < '7') and ($::operatingsystem != 'Ubuntu')
       'source' => 'https://repos.sonar.digitalocean.com/sonar-agent.asc',
     },
     include  => {
-      'src' => true,
+      'src' => false,
       'deb' => true,
     },
+    before   => Package['do-agent'],
   }
 }

@@ -25,5 +25,6 @@ class do_agent::repo::yum {
     enabled        => '1',
     gpgcheck       => '1',
     gpgkey         => 'https://repos.sonar.digitalocean.com/sonar-agent.asc',
+    before         => Package['do-agent'],
   }
 }
