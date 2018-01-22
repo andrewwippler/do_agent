@@ -11,5 +11,5 @@ class do_agent::package {
   package {'do-agent':
     ensure => present,
   }
-  
+
 }

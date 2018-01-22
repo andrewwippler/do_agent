@@ -11,11 +11,11 @@ class do_agent::repo::yum {
   $ver = $facts['os']['release']['major']
 
   if (0+$ver < 5) {
-    fail("Your version ($ver) of $::operatingsystem is too old for do_agent")
+    fail("Your version (${ver}) of ${::operatingsystem} is too old for do_agent")
   }
 
   if (versioncmp('22', $ver) > 0) and ($::operatingsystem == 'Fedora') {
-    fail("Your version ($ver) of $::operatingsystem is too old for do_agent")
+    fail("Your version (${ver}) of ${::operatingsystem} is too old for do_agent")
   }
 
   yumrepo {'digitalocean-agent':

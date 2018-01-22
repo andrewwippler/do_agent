@@ -10,12 +10,12 @@ class do_agent::repo::apt {
 
 if ($facts['os']['release']['major'] < '7') and ($::operatingsystem != 'Ubuntu') {
   $ver = $facts['os']['release']['major']
-    fail("Your version ($ver) of $::operatingsystem is too old for do_agent")
+    fail("Your version (${ver}) of ${::operatingsystem} is too old for do_agent")
   }
 
   if ($facts['os']['release']['full'] < '13.11') and ($::operatingsystem == 'Ubuntu') {
     $ver = $facts['os']['release']['full']
-    fail("Your version ($ver) of $::operatingsystem is too old for do_agent")
+    fail("Your version (${ver}) of ${::operatingsystem} is too old for do_agent")
   }
 
   apt::source { 'digitalocean-agent.list':

@@ -8,7 +8,7 @@
 #   include do_agent
 class do_agent {
 
-  if $facts['dmi']['manufacturer'] == "DigitalOcean" {
+  if $facts['dmi']['manufacturer'] == 'DigitalOcean' {
     case $::operatingsystem {
       'RedHat', 'Fedora', 'CentOS': {
         include do_agent::repo::yum
@@ -21,11 +21,8 @@ class do_agent {
       }
     }
   include do_agent::package
-  
+
   } else {
     notify {'The DigitalOcean Agent is only supported on DigitalOcean.':}
   }
-  
-
-
 }
