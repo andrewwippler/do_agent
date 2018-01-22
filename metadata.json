@@ -4,9 +4,9 @@
   "author": "Andrew J Wippler",
   "summary": "Installs the DigitalOcean Agent for better metrics/stats on the Droplet.",
   "license": "MIT",
-  "source": "",
+  "source": "https://github.com/andrewwippler/do_agent",
   "dependencies": [
-
+    { "name": "puppetlabs/apt", "version_requirement": ">= 4.0.0 < 5.0.0" }
   ],
   "operatingsystem_support": [
     {
